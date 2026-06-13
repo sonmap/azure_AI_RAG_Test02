@@ -451,4 +451,7 @@ curl -sS \
 - The single-page PDF download endpoint dynamically extracts one page from the converted PDF.
 - Private Blob containers are accessed through the web application using managed identity.
 - Azure OpenAI model availability depends on region, quota, and subscription approval status.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1fc9b219b132eff6aad7cf03e0cdf47910320019

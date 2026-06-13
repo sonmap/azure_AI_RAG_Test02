@@ -82,6 +82,10 @@ sequenceDiagram
 ```
 
 ## OCR Support for Diagrams and Images
+<img width="943" height="862" alt="image" src="https://github.com/user-attachments/assets/d54b9c1d-a4c9-4e85-90b0-7eeee31b403e" />
+
+<img width="972" height="1072" alt="image" src="https://github.com/user-attachments/assets/95bf9f7e-cebf-4926-9efa-0b0cce786d4f" />
+
 
 The worker includes OCR processing so that text embedded in architecture diagrams, screenshots, scanned slides, or image-only page areas can be indexed and displayed.
 
@@ -451,7 +455,4 @@ curl -sS \
 - The single-page PDF download endpoint dynamically extracts one page from the converted PDF.
 - Private Blob containers are accessed through the web application using managed identity.
 - Azure OpenAI model availability depends on region, quota, and subscription approval status.
-<<<<<<< HEAD
-
-=======
->>>>>>> 1fc9b219b132eff6aad7cf03e0cdf47910320019
+ 

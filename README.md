@@ -95,6 +95,9 @@ tesseract-ocr-kor
 
 ## Azure Resources
 
+<img width="1447" height="657" alt="image" src="https://github.com/user-attachments/assets/57cf955f-b7c7-4363-a6bd-736bdc3b6b92" />
+
+
 ### Resource Group
 
 | Resource | Purpose |

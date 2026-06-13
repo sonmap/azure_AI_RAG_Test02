@@ -26,32 +26,8 @@ The system uploads documents to Azure Blob Storage, queues indexing work, conver
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    User["User Browser"] --> Web["Azure Container App<br/>ca-docsearch-web-dev<br/>FastAPI Web/API<br/>image: web:grid-v7"]
+<img width="4041" height="2878" alt="mermaid-diagram (2)" src="https://github.com/user-attachments/assets/1aa58665-6c39-4679-a062-3ab6a858fc5b" />
 
-    Web -->|"Upload original file"| Original["Blob Container<br/>original"]
-    Web -->|"Create indexing message"| Queue["Storage Queue<br/>index-jobs"]
-    Web -->|"Search query"| Search["Azure AI Search<br/>srch-docsearch-dev-krc<br/>index: ppt-doc-chunks"]
-    Web -->|"Read thumbnails"| Thumbnails["Blob Container<br/>thumbnails"]
-    Web -->|"Download full/page PDF"| ConvertedPdf["Blob Container<br/>converted-pdf"]
-
-    Queue --> Worker["Container Apps Job<br/>caj-docsearch-indexer-dev<br/>image: worker:ocr-v3"]
-
-    Worker -->|"Download source file"| Original
-    Worker -->|"LibreOffice conversion"| PdfProcess["PDF Conversion"]
-    PdfProcess -->|"Store converted PDF"| ConvertedPdf
-    PdfProcess -->|"Render pages as PNG"| PageImages["Page Images"]
-    PageImages -->|"Store page thumbnails"| Thumbnails
-    PageImages -->|"Tesseract OCR<br/>kor+eng"| OCR["Diagram/Image OCR"]
-    PdfProcess -->|"Extract embedded PDF text"| TextExtract["Page Text Extraction"]
-    OCR --> SearchDoc["Search Document Builder"]
-    TextExtract --> SearchDoc
-    SearchDoc -->|"text + ocr_text + metadata"| Search
-
-    ACR["Azure Container Registry<br/>acrdocsearchdevcbwi"] --> Web
-    ACR --> Worker
-```
 
 ## End-to-End Flow
 

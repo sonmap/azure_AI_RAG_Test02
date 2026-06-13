@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Terraform local state and generated plans
+**/.terraform/
+**/.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform variable files can contain tenant IDs, subscription IDs, secrets, or environment-specific values.
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Azure and local CLI artifacts
+.azure/
+*.log
+
+# Generated or temporary runtime files
+*.tmp
+tmp/
+_tmp/
+downloads/
+
+# Accidental HTTP request fragments
+Accept:
+GET
+Host:
+User-Agent:
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo

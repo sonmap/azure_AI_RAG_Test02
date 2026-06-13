@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+azure-identity
+azure-storage-blob
+azure-storage-queue
+azure-search-documents
+openai
+python-multipart==0.0.20
+PyMuPDF==1.24.14

@@ -1,0 +1,8 @@
+azure-identity
+azure-storage-blob
+azure-storage-queue
+azure-search-documents
+openai
+PyMuPDF
+pdf2image
+Pillow

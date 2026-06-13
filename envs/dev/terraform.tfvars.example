@@ -1,0 +1,41 @@
+project     = "docsearch"
+env         = "dev"
+owner       = "sonmap"
+
+location    = "koreacentral"
+location_cd = "krc"
+
+# Azure OpenAI deployments can fail depending on subscription, region, and quota availability.
+# If deployment fails, update these values to a model/version/region available in your environment.
+openai_location = "koreacentral"
+
+search_sku             = "basic"
+semantic_search_sku    = "free"
+search_replica_count   = 1
+search_partition_count = 1
+
+search_index_name   = "ppt-doc-chunks"
+create_search_index = true
+
+embedding_deployment_name = "text-embedding-3-small"
+embedding_model_name      = "text-embedding-3-small"
+embedding_model_version   = "1"
+embedding_dimensions      = 1536
+embedding_capacity        = 10
+
+chat_deployment_name = "gpt-4o-mini"
+chat_model_name      = "gpt-4o-mini"
+chat_model_version   = "2024-07-18"
+chat_capacity        = 10
+
+# Recommended for the first apply: keep this false so Container Apps can be created
+# with public sample images. After pushing real images to ACR, change it to true.
+use_acr_images = false
+
+# After setting use_acr_images=true, replace these with your real ACR image paths.
+web_image    = "mcr.microsoft.com/azuredocs/containerapps-helloworld:latest"
+worker_image = "mcr.microsoft.com/k8se/quickstart-jobs:latest"
+
+extra_tags = {
+  cost_center = "poc"
+}

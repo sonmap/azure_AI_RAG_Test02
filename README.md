@@ -60,7 +60,8 @@ sequenceDiagram
 ## OCR Support for Diagrams and Images
 <img width="943" height="862" alt="image" src="https://github.com/user-attachments/assets/d54b9c1d-a4c9-4e85-90b0-7eeee31b403e" />
 
-<img width="972" height="1072" alt="image" src="https://github.com/user-attachments/assets/95bf9f7e-cebf-4926-9efa-0b0cce786d4f" />
+<img width="1160" height="903" alt="image" src="https://github.com/user-attachments/assets/a4501d52-3ebc-4695-a233-b981165c8220" />
+
 
 
 The worker includes OCR processing so that text embedded in architecture diagrams, screenshots, scanned slides, or image-only page areas can be indexed and displayed.
